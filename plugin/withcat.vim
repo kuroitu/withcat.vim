@@ -24,6 +24,7 @@ function! WithCat()
     let s:popUpWindow = popup_create("", {})
     let s:status = 1
     "call win_execute(s:popUpWindow ,'setlocal filetype=withcatHL')
+    call win_execute(s:popUpWindow ,'')
 
     while s:status
         for i in range(1)
