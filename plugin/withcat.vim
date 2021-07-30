@@ -26,7 +26,7 @@ function! WithCat()
     "call win_execute(s:popUpWindow ,'setlocal filetype=withcatHL')
 
     while s:status
-        for i in range(12)
+        for i in range(1)
             call popup_settext(s:popUpWindow, s:PATTERN1[i])
             redraw
             if getchar(0)
