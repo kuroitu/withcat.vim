@@ -23,7 +23,7 @@ function! WithCat()
     " Init
     let s:popUpWindow = popup_create("", {})
     let s:status = 1
-    " call win_execute(s:popUpWindow ,'setlocal filetype=withcatHL')
+    "call win_execute(s:popUpWindow ,'setlocal filetype=withcatHL')
 
     while s:status
         for i in range(12)
