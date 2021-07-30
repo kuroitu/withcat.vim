@@ -1,19 +1,19 @@
 let s:PATTERN1 = [
     \[
-    \ "     ,,                             "
-    \ "   I$MNM,                           "
-    \ "=MMMMMMM:                           "
-    \ ",:MMMMMM,                           "
-    \ " +MMMMMM~                           "
-    \ ",MMMMMMMMMM?                        "
-    \ "MMMMMMMMMMMMMMM                     "
-    \ " MMMMMMMMMMMMMMMM                   "
-    \ " ,OMMMMMMMMMMMMMMM                  "
-    \ "   MMMMMMMMMMMMMMM:                 "
-    \ "  =MMM$MMMMMMMMMMMI                 "
-    \ "  MMM  ,=MMMMMMMMM=                 "
-    \ "MMMM,  ,MMMMMMMMMMMM=~~::,:~~~=+I8M7"
-    \ " ,:     ODMNOZZ7+,:::~::,,,,        "
+    \ "     ,,                             ",
+    \ "   I$MNM,                           ",
+    \ "=MMMMMMM:                           ",
+    \ ",:MMMMMM,                           ",
+    \ " +MMMMMM~                           ",
+    \ ",MMMMMMMMMM?                        ",
+    \ "MMMMMMMMMMMMMMM                     ",
+    \ " MMMMMMMMMMMMMMMM                   ",
+    \ " ,OMMMMMMMMMMMMMMM                  ",
+    \ "   MMMMMMMMMMMMMMM:                 ",
+    \ "  =MMM$MMMMMMMMMMMI                 ",
+    \ "  MMM  ,=MMMMMMMMM=                 ",
+    \ "MMMM,  ,MMMMMMMMMMMM=~~::,:~~~=+I8M7",
+    \ " ,:     ODMNOZZ7+,:::~::,,,,        ",
     \],
 \]
 
