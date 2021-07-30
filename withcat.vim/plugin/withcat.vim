@@ -17,7 +17,6 @@ let s:PATTERN1 = [
     \],
 ]
 
-"mainmain
 
 "Main
 function! WithCat()
