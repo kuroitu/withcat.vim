@@ -14,7 +14,7 @@ let s:PATTERN1 = [
     \ "  MMM  ,=MMMMMMMMM=                 "
     \ "MMMM,  ,MMMMMMMMMMMM=~~::,:~~~=+I8M7"
     \ " ,:     ODMNOZZ7+,:::~::,,,,        "
-    \],
+    \]
 ]
 
 
