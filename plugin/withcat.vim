@@ -1,43 +1,34 @@
-let s:PATTERN1 = [
-    \[
-    \ "     ,,                             ",
-    \ "   I$MNM,                           ",
-    \ "=MMMMMMM:                           ",
-    \ ",:MMMMMM,                           ",
-    \ " +MMMMMM~                           ",
-    \ ",MMMMMMMMMM?                        ",
-    \ "MMMMMMMMMMMMMMM                     ",
-    \ " MMMMMMMMMMMMMMMM                   ",
-    \ " ,OMMMMMMMMMMMMMMM                  ",
-    \ "   MMMMMMMMMMMMMMM:                 ",
-    \ "  =MMM$MMMMMMMMMMMI                 ",
-    \ "  MMM  ,=MMMMMMMMM=                 ",
-    \ "MMMM,  ,MMMMMMMMMMMM=~~::,:~~~=+I8M7",
-    \ " ,:     ODMNOZZ7+,:::~::,,,,        ",
-    \],
-\]
+if get(g:, 'loaded_withcat', 0)
+    finish
+endif
+let g:loaded_withcat = 1
 
+let s:dir = expand('<sfile>:h')
 
-"Main
-function! WithCat()
-    " Init
-    execute "normal! :sp"
-    let s:popUpWindow = popup_create("", {})
-    let s:status = 1
-    "call win_execute(s:popUpWindow ,'setlocal filetype=withcatHL')
+command WithCat call s:StartWithCat()
 
-    while s:status
-        for i in range(1)
-            call popup_settext(s:popUpWindow, s:PATTERN1[i])
-            redraw
-            if getchar(0)
-                let s:status = 0
-                break
-            endif
-            sleep 85m
-        endfor
-    endwhile
+func s:StartWithCat()
+    " Check features before loading the autoload file to avoid error messages.
+    if !has('patch-8.1.1705')
+        call s:Sorry('Sorry, This build of Vim is too old, you need at least 8.1.1705')
+        return
+    endif
+    if !has('textprop')
+        call s:Sorry('Sorry, This build of Vim is lacking the +textprop feature')
+        return
+    endif
+"   if &lines < 45
+"       call s:Sorry('Need at least a terminal height of 45 lines')
+"       return
+"   endif
 
-    call popup_close(s:popUpWindow)
-endfunction
-command! WithCat call WithCat()
+    " The implementation is in an autoload file, so that this plugin doesn't
+    " take much time when not being used.
+    call withcat#Start(s:dir)
+endfunc
+
+func s:Sorry(msg)
+    echohl WarningMsg
+    echo a:msg
+    echohl None
+endfunc
