@@ -5,6 +5,8 @@
 By all means by all means! To you who want to play with cats in vim  
 A plugin for cat lovers by cat lovers
 
+![catwalk.gif](https://github.com/kuroitu/images/blob/master/cat_gif.gif)
+
 # Usage
 vimを開いてノーマルモードで
 
