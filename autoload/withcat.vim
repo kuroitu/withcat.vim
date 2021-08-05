@@ -126,7 +126,8 @@ func s:CatWalk(walker)
         for i in range(len(a:walker))
             call popup_settext(s:popUpWindow, a:walker[i])
             redraw
-            if getchar(0)
+            let s:char = getchar(0)
+            if s:char
                 let s:status = 0
                 break
             endif
@@ -134,9 +135,7 @@ func s:CatWalk(walker)
         endfor
     endwhile
 
-    "call popup_close(s:popUpWindow)
-    "call s:CatWalk()
-    if getchar(0) == "q"
+    if nr2char(s:char) == 'q'
         call s:Clear()
         let s:popUpWindow = popup_create([
                 \   #{text: 'Good Vim!',
